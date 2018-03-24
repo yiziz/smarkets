@@ -9,7 +9,7 @@ import EventPage from './routes/EventPage'
 import Events from './components/Events'
 
 // So this can be viewed through github pages
-const path = process.env.NODE_ENV === 'production' ? 'smarkets' : ''
+const path = process.env.NODE_ENV === 'production' ? '/smarkets' : ''
 
 class App extends Component {
   render() {

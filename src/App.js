@@ -8,6 +8,9 @@ import EventPage from './routes/EventPage'
 
 import Events from './components/Events'
 
+// So this can be viewed through github pages
+const path = process.env.NODE_ENV === 'production' ? 'smarkets' : ''
+
 class App extends Component {
   render() {
     return (
@@ -16,13 +19,13 @@ class App extends Component {
           <Switch>
             <Route
               exact
-              path="/"
+              path=`${path}/`
               render={() =>
                 <Events source="https://cors-anywhere.herokuapp.com/https://fe-api.smarkets.com/v0/events/popular/" />
               }
             />
-            <Route path="/events/:id/" component={EventPage} />
-            <Redirect to="/" />
+            <Route path=`${path}/events/:id/` component={EventPage} />
+            <Redirect to=`${path}/` />
           </Switch>
         </HashRouter>
       </div>

@@ -21,7 +21,7 @@ class App extends Component {
               exact
               path={`${path}/`}
               render={() =>
-                <Events source="https://cors-anywhere.herokuapp.com/https://fe-api.smarkets.com/v0/events/popular/" />
+                <Events source="https://fe-api.smarkets.com/v0/events/popular/" />
               }
             />
             <Route path={`${path}/events/:id/`} component={EventPage} />

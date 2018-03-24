@@ -1,0 +1,12 @@
+
+@import './normalize.scss';
+@import './loader.scss';
+
+@import './events.scss';
+@import './event_page.scss';
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 auto;
+}
